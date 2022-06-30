@@ -7,11 +7,11 @@ while (input !== 'quit' && input !== 'q') {
             console.log(`${i}: ${todos[i]}`);
         }
         console.log('**********')
-    } else if (input === 'new') {
+    } else if (input === 'new' && input !== 'n') {
         const newTodo = prompt("Ok, what is the new todo?");
         todos.push(newTodo);
         console.log(`${newTodo} added to the list`)
-    } else if (input === 'delect') {
+    } else if (input === 'delect' && input !== 'd') {
         const index = parseInt(prompt('Ok, enter the index to delect:'));
         if (!Number.isNaN(index)) {
             const delected = todos.splice(index, 1);
